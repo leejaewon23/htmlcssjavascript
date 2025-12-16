@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<body>
+    <h1>회원가입</h1><br>
+    <h3>* 필수입력정보</h3><br>
+    <form>
+        <label for="아이디">아이디</label>
+        <input type="text" id="id" name="아이디">
+        <input type="button" onclick="alert('중복 확인 되었습니다!')" value="중복확인"><br>
+    </form>
+    <form>
+        <label for="password">비밀번호</label>
+        <input type="text" id="password" name="비밀번호" placeholder="10자이상의영문과숫자조합"><br>
+    </form>
+    <form>
+        <label for="name">이름</label>
+        <input type="text" id="name" name="이름"><br>
+    </form>
+    <form>
+        <label for="phone">연락처</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+    </form>
+    <form>
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email">
+    </form>
+    <form>
+        <label for="mail">전자우편신청</label>
+        <input type="radio" id="신청" name="fav_language" value="예 신청합니다">
+        <label for="mail_yes">예 신청합니다</label>
+        <input type="radio" id="신청안함" name="fav_language" value="아니오 신청하지않습니다.">
+        <label for="mail_no">아니오 신청하지 않습니다.</label>
+    </form>
+    <br>
+    <h3>* 선택입력정보</h3><br>
+    <table>
+        <tr>
+            <th>프로필 사진</th>
+            <td><input type="file" id="myfile" name="myfile"></td>
+        </tr>
+        <tr>
+            <th>생년월일</th>
+            <td><input type="month" id="bdaymonth" name="bdaymonth"></td>
+        </tr>
+        <tr>
+            <th>성별</th>
+            <td><input type="radio" id="men" name="men"><label for="html">남</label> </td>
+            <td><input type="radio" id="women" name="women"><label for="html">여</label> </td>
+        </tr>
+        <tr>
+            <th>직업</th>
+            <td>
+                <select name="user_job" class="textForm">
+                    <option>회사원</option>
+                    <option>기술자</option>
+                    <option selected>학생</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>자기소개</th>
+            <td><textarea name="user_info" class="textForm"></textarea></td>
+        </tr>
+    </table>
+</body>
+</html>
