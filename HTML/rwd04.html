@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* [1] 헤더: 모바일 1:2 비율 */
+        .headerRow {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .headerItem1 {
+            background-color: slateblue;
+            margin: 10px;
+        }
+
+        .headerItem2 {
+            background-color: darkkhaki;
+            margin: 10px;
+        }
+
+        /* [2] 섹션 기본 (모바일): 위아래 배치 */
+        .section1 {
+            display: grid;
+            grid-template-columns: 1fr;
+            /* 모바일은 1열 */
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* 제목 공통 (노랑, 핑크, 연두) */
+        .section1_title,
+        .bg_pink,
+        .bg_green {
+            background-color: yellow;
+            /* 기본값 */
+            margin: 5px 10px;
+            line-height: 50px;
+            /* 높이감 조절 */
+        }
+
+        .bg_pink {
+            background-color: pink;
+        }
+
+        .bg_green {
+            background-color: greenyellow;
+        }
+
+        /* 내용 (회색) */
+        .section1_content {
+            background-color: lightgrey;
+            margin: 5px 10px;
+            line-height: 100px;
+            /* 제목보다 높게 설정 */
+        }
+
+        /* [3] 반응형: 600px 이상일 때 */
+        @media (min-width: 600px) {
+
+            /* 헤더 1:1 비율로 변경 */
+            .headerRow {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .section1 {
+                grid-template-columns: 150px 1fr;
+                /* 제목은 고정 너비, 내용은 나머지 */
+                grid-template-rows: auto auto;
+                /* 2줄 구조 생성 */
+                text-align: center;
+            }
+
+            /* 모든 제목 박스(첫 번째 자식)를 1행 1열에 고정 */
+            .section1>div:first-child {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+
+            /* 모든 내용 박스(두 번째 자식)를 2열 전체 높이에 배치 (ㄴ자 핵심) */
+            .section1_content {
+                grid-column: 2 / 3;
+                grid-row: 1 / 3;
+                /* 1행부터 2행 끝까지 확장 */
+                line-height: 150px;
+                /* 이미지처럼 길게 나오도록 조정 */
+            }
+        }
+
+        @media (min-width:1024px) {
+
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr; /* 1:1:1 비율로 3칸 */
+                gap: 20px; /* 섹션 사이 간격 */
+            }
+            .headerRow {
+                grid-template-columns: 1fr 5fr;
+            }
+
+            .section1 {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+                grid-template-areas: none;
+            }
+
+            .section1_title, .bg_pink, .bg_green, .section1_content {
+                grid-area: auto;
+                grid-column: auto;
+                grid-row: auto;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="myheader">
+        <div class="headerRow">
+            <div class="headerItem1">제목 1</div>
+            <div class="headerItem2">제목 2</div>
+        </div>
+
+    </header>
+
+    <main class="container">
+        <section>
+            <div class="section1">
+                <div class="section1_title">섹션제목1</div>
+                <div class="section1_content">섹션내용1</div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section1">
+                <div class="bg_pink">섹션제목2</div>
+                <div class="section1_content">섹션내용2</div>
+            </div>
+        </section>
+        <section>
+            <div class="section1">
+                <div class="bg_green">섹션제목3</div>
+                <div class="section1_content">섹션내용3</div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

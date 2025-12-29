@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형 실습</title>
+    <style>
+      #mainBody {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .mytop1 {
+        grid-area: mytop1;
+      }
+      .mytop2 {
+        grid-area: mytop2;
+      }
+      .mycnt1 {
+        grid-area: mycnt1;
+      }
+      .mycnt2 {
+        grid-area: mycnt2;
+      }
+      #headerDiv {
+        font-size: 48px;
+        /* font-size: 10vw; */
+        background-color: rgba(235, 165, 35, 0.8);
+      }
+      .sectionItem {
+        background-color: rgba(183, 179, 174, 0.8);
+      }
+      .sectionPart {
+        background-color: rgba(66, 101, 64, 0.8);
+      }
+      div {
+        text-align: center;
+        border-radius: 8px;
+        margin: 10px;
+        padding: 6px;
+      }
+      
+      #mymain {
+        display: grid;
+        grid-template-areas:
+          "mytop1"
+          "mytop2"
+          "mycnt1"
+          "mycnt2";
+      }
+
+      @media (min-width: 600px) {
+        #headerDiv {
+          font-size: 56px;
+        }
+        #mymain {
+          display: grid;
+          grid-template-areas:
+            "mytop1 mytop1"
+            "mytop2 mytop2"
+            "mycnt1 mycnt2";
+        }
+        .mycnt1, .mycnt2 {
+          line-height: 15vh;
+        }
+      }
+
+      @media (min-width: 1000px) {
+        #headerDiv {
+          font-size: 60px;
+        }
+        #mymain {
+          display: grid;
+          grid-template-areas:
+            "mytop1 mytop1 mytop2"
+            "mycnt1 mycnt2 mytop2";
+        }
+        .mytop2 {
+          line-height: 28vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mainBody">
+      <header id="myheader">
+        <div id="headerDiv">제 목</div>
+      </header>
+      <main id="mymain">
+        <div class="sectionItem mytop1">주제 1</div>
+        <div class="sectionItem mytop2">주제 2</div>
+        <div class="sectionPart mycnt1">설명 1</div>
+        <div class="sectionPart mycnt2">설명 2</div>
+      </main>
+      <footer id="myfooter">
+        <div>copyright</div>
+      </footer>
+    </div>
+  </body>
+</html>

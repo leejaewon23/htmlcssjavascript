@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .header_container {
+        display: flex;
+        flex-direction: column;
+        flex: none;
+      }
+      .header_item1 {
+        flex: none;
+        display: flex;
+      }
+      .logo {
+        margin: 3px;
+      }
+      .search {
+        margin: 3px;
+        width: 200px;
+      }
+      .gnb {
+        margin-top: 3px;
+        margin-right: 3px;
+        margin-bottom: 3px;
+        margin-left: auto;
+      }
+      .header_item2 {
+        flex: none; /* flex: 1 1 0 */
+        display: flex;
+        justify-content: space-between;
+      }
+      .header_item2 div {
+        margin: 3px;
+      }
+      div, span {
+        border: 1px solid black;
+      }
+      .flex_main {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+      }
+      .main_item1 {
+        width: 100px;
+      }
+      .main_item2 {
+        flex-grow: 1;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center;
+        align-items: center; */
+      }
+      .html_container {
+        display: flex;
+        flex-direction: column;
+        height: 95vh;
+      }
+      .footer_container {
+        margin-top: auto;
+      }
+      .input_component {
+        display: flex;
+        justify-content: center;
+        border: none;
+      }
+      .input_component input {
+        flex: none;
+      }
+      .input_component label, .input_component input {
+        align-self: center;
+      }
+      .dynamic_width_container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 300px;
+      }
+      .dynamic_item {
+        min-width: 350px;
+        max-width: 400px; /* 최대 폭은 250픽셀*/
+        overflow: hidden; /* 내용물을 제한된 크기에 표현못하면 내용물을 짤린 부분만 보여라 */
+        text-overflow: ellipsis; /*내용물이 출력할 크키를 넘으면 ... 표시해라*/
+        white-space: nowrap; /*줄바꿈을 표현하지 마라*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="html_container">
+      <header class="header_container">
+        <div class="header_item1">
+          <div class="logo">logo</div>
+          <div class="search">search</div>
+          <div class="gnb">gnb</div>
+        </div>
+        <div class="header_item2">
+          <div>나에 대하여</div>
+          <div>나의 전공/공부</div>
+          <div>나의 취미들</div>
+        </div>
+      </header>
+      <main class="flex_main">
+        <div class="main_item1">좌측 메뉴</div>
+        <div class="main_item2">
+          <!-- <span style="margin: auto">컨텐츠 내용들</span> -->
+          <div class="input_component">
+            <label>line1</label>
+            <input type="text">
+          </div>
+          <div class="input_component">
+            <label>line1<br/>line2</label>
+            <textarea cols="40" rows="6"></textarea>
+          </div>
+          <div class="dynamic_width_container">
+            <div class="dynamic_item">box 1 은 있습니다.<br/>box 1-1 <br> box1=2 <br> box1=3</div>
+            <div class="dynamic_item">box 2 의 내용물은 매우 많습니다. <br> box2-2<br> box2-2<br> box2-2<br> box2-2</div>
+            <div class="dynamic_item">box 3 내용물<br> box3-2<br> box3-2<br> box3-2</div>
+            <div class="dynamic_item">box 4 내용물<br> box4-2<br> box4-2</div>
+            <div class="dynamic_item" style="margin-left: auto;">box 5 의 내용물은 매우 매우 매우 매우 많습니다.<br> box5-2</div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer_container">
+        <div class="footer_item">포트폴리오 기타 정보</div>
+      </footer>
+    </div>
+  </body>
+</html>

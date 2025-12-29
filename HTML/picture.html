@@ -3,27 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>음악 앨범</title>
+    <title>PLAYLIST</title>
+    <style>
+        .name {
+            color: black;
+        }
+        
+
+        .picture1 {
+            margin: 50px;
+        }
+        .picture2 {
+            margin: 50px;
+        }
+        .picture3 {
+            margin: 50px;
+        }
+        .picture4 {
+            margin: 50px;
+        }
+        .picture5 {
+            margin: 50px;
+        }
+        .picture6 {
+            margin: 50px;
+        }
+
+        .flex {
+            display: flex;
+            border: 1px solid black;
+            flex-wrap: wrap;
+            background-color: lightgray;
+        }
+        .header_container {
+            border: none;
+        }
+
+        .footer_container{
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 8px;
+            height: 50px;
+            border: 1px solid black;
+        }
+        .name {
+            text-align: center;
+        }
+
+        .song {
+            border: 1px solid black;
+            width: 100px;
+            text-align: center;
+        }
+
+        
+    </style>
 </head>
 <body>
-    <h1>음악 앨범</h1>
+    <header class="header_container">
+    <h1 class="name">PLAYLIST</h1>
+    <div class="song1">
+    <div class="song">인기 차트</div>
+    <div class="song">베스트 앨범</div>
+    <div class="song">가수별</div>
+    <div class="song">장르별</div>
+    <div class="song">문의</div>
+    </div>  
     <hr>
-    <img src="image/astroworld.jpeg" alt="ASTROWORLD">
-    <p><b>ASTROWORLD-Travis Scott</b></p>
+    </header>
 
-    <img src="image/runaway.jpeg" alt="RUNAWAY">
-    <p><b>My Beautiful Dark Twisted Fantasy-Kanye West</b></p>
+    <main>
+    <div class="flex">
+    <img src="image/astroworld.jpeg" class="picture1" alt="ASTROWORLD">
+    
 
-    <img src="image/frank_ocean.jpeg" alt="FRANK OCEAN">
-    <p><b>Blonde-Frank Ocean</b></p>
+    <img src="image/runaway.jpeg" class="picture2" alt="RUNAWAY">
+    
 
-    <img src="image/post_malone.jpeg" alt="POST MALONE">
-    <p><b>AUSTIN-Post Malone</b></p>
+    <img src="image/frank_ocean.jpeg" class="picture3" alt="FRANK OCEAN">
+    <br>
+   
 
-    <img src="image/kendrick_lamar.jpeg" alt="KENDRICK LAMAR">
-    <p><b>DNA.-Kendrick Lamar</b></p>
+    <img src="image/post_malone.jpeg" class="picture4" alt="POST MALONE">
+    
+    
+    <img src="image/kendrick_lamar.jpeg" class="picture5" alt="KENDRICK LAMAR">
+    
 
-    <img src="image/all_the_stars.jpeg" alt="ALL THE STARS">
-    <p><b>Black Panther-Kendrick Lamar</b></p>
+    <img src="image/all_the_stars.jpeg" class="picture6" alt="ALL THE STARS">
+    </div>
+    </main>
+
+    <footer class="footer_container">
+        <div>환영합니다</div>
+    </footer>
 </body>
 </html>

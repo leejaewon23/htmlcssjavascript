@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex_container {
+            display: flex; 
+            border: 1px solid black;
+            height: 70px;
+            padding-left: 8px;
+            
+        }
+
+        .flex_item div{
+            flex-wrap: wrap;
+            border: 1px solid black;
+            /* flex : initial */
+            flex: 0 1 auto;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            flex-direction: row;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="flex_container">
+        <div class="flex_item">
+            <div>box1</div>
+            <div>box2</div>
+            <div>box3</div>
+            <div>box4</div>
+            <div>box5</div>
+        </div>
+    </div>
+    
+</body>
+</html>

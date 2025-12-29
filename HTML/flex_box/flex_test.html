@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex_container {
+            display: flex;
+            flex-direction: column;
+            height: 100px;
+            background-color: lightblue;
+        }
+
+        .flex_item {
+            flex: 1; /* flex: 1 1 0 */
+            overflow: auto;
+        }
+       
+        .flex_main {
+            display: flex;
+            flex-direction: row;
+            height: 500%;
+            
+        }
+
+        .main_item1 {
+            flex: 1; /* flex 속성은 flex-grow, flex-shrink, flex-basis 속성을 축약한 표현이다.*/
+            /* flex: 1 1 0과 같다*/
+            width: 200px;
+            height: 400px;
+        }
+        .main_item2 {
+            flex: 1;
+            overflow: auto;
+        }
+        div {
+            border: 1px solid black;
+        }
+        .flex_footer {
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header class="flex_container">
+        <div class="flex_item">상위 메뉴 1</div>
+        <div class="flex_item">상위 메뉴 2</div>
+    </header>
+    <main class="flex_main">
+        <div class="main_item1">좌측 메뉴</div>
+        <div class="main_item2">우측 메인 컨텐츠</div>
+
+    </main>
+    <footer>
+        <div class="flex_footer">포트폴리오 기타 정보</div>
+            
+    </footer>
+    
+    
+</body>
+</html>
