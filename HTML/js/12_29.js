@@ -60,5 +60,8 @@ let v5 = 40;
 let totall = v4 && v5
 console.log(totall)
 
+console.log(typeof(defaultUser));
+console.log(typeof(validUser));
+
 // 삼항 연산자
 // (조건) ? (조건이 참일 때) : (조건이 거짓일 때)
